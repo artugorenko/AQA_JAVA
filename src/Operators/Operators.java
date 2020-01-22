@@ -1,5 +1,4 @@
 package Operators;
-
 import java.util.Scanner;
 
 public class Operators {
