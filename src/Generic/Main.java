@@ -1,5 +1,5 @@
 package Generic;
-
+ 
 public class Main {
 
     public static <T> void generic(T a) {
