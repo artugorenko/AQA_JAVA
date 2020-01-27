@@ -1,4 +1,4 @@
-package one;
+package Modifiers.one;
 
 public class FirstClass {
     static int state=0;
