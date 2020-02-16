@@ -1,5 +1,5 @@
-package three;
-import one.FirstClass;
+package Modifiers.three;
+import Modifiers.one.FirstClass;
 
 
 
