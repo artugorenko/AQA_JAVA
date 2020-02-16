@@ -1,17 +1,14 @@
 package FrontJava;
 
-import org.apache.commons.logging.LogSource;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.openqa.selenium.*;
+import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.logging.Logger;
 
 import static FrontJava.MainHeaderBBC.*;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ChromeDriverTest {
@@ -39,23 +36,20 @@ public class ChromeDriverTest {
     void simpleTest(String name) throws InterruptedException, IOException {
         driver = Singletone.getDriver(name);
         MainBBC(driver);
-
         setInputSearch("text");
-        assertEquals("text", getInputSearch(),"Введен текст в строку поиска");
+        assertEquals("text", getInputSearch(), "Введен текст в строку поиска");
         menuClick("News");
-        assertEquals("https://www.bbc.com/news",url(),"Переход на страницу новостей");
+        assertEquals("https://www.bbc.com/news", url(), "Переход на страницу новостей");
     }
 
     @AfterEach
     public void tearDown() {
-
     }
 
     @AfterAll
     public static void createAndStopService() {
         Iterator<WebDriver> iter = Singletone.drivers.values().iterator();
         while (iter.hasNext()) {
-
             iter.next().quit();
         }
         Singletone.drivers.clear();
