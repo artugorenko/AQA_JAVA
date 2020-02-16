@@ -1,7 +1,6 @@
 package FrontJava;
 
 
-
 import io.qameta.allure.*;
 
 import org.junit.jupiter.api.DisplayName;

@@ -8,7 +8,6 @@ public class MainHeaderBBC {
     private static By search = By.id("orb-search-q");
 
 
-
 public static String url(){
     return driver.getCurrentUrl();
 }
